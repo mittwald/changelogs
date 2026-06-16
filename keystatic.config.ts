@@ -6,7 +6,6 @@ const changelogSchema = (folder: string) =>
     slugField: "title",
     path: `src/content/${folder}/*`,
     format: { contentField: "content", data: "yaml" },
-    entryLayout: "content",
     columns: ["title", "date"],
     schema: {
       title: fields.slug({ name: { label: "Titel" } }),
@@ -40,7 +39,7 @@ const changelogSchema = (folder: string) =>
 export default config({
   storage: { kind: "local" },
   ui: {
-    brand: { name: "mittwald Changelogs" },
+    brand: { name: "Changelogs" },
   },
   collections: {
     mstudio: changelogSchema("mstudio"),
