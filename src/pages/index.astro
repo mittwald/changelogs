@@ -1,0 +1,117 @@
+---
+import Markdoc from "@markdoc/markdoc";
+import { createReader } from "@keystatic/core/reader";
+import keystaticConfig from "../../keystatic.config";
+
+const reader = createReader(process.cwd(), keystaticConfig);
+
+const sources = [
+  { key: "mstudio", label: "mStudio" },
+  { key: "nexus", label: "Nexus" },
+] as const;
+
+const sections = await Promise.all(
+  sources.map(async (source) => {
+    const items = await reader.collections[source.key].all();
+    const entries = await Promise.all(
+      items.map(async (item) => {
+        const { node } = await item.entry.content();
+        return {
+          title: item.entry.title,
+          date: item.entry.date ?? "",
+          html: Markdoc.renderers.html(Markdoc.transform(node)),
+        };
+      }),
+    );
+    entries.sort((a, b) => b.date.localeCompare(a.date));
+    return { label: source.label, entries };
+  }),
+);
+
+const dateFormat = new Intl.DateTimeFormat("de-DE", {
+  day: "2-digit",
+  month: "long",
+  year: "numeric",
+});
+const formatDate = (iso: string) =>
+  iso ? dateFormat.format(new Date(iso)) : "";
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>mittwald Changelogs</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 44rem;
+        margin: 3rem auto;
+        padding: 0 1.25rem;
+        line-height: 1.55;
+      }
+      h1 {
+        margin-bottom: 0.25rem;
+      }
+      .sub {
+        color: #666;
+        margin-top: 0;
+      }
+      .entry {
+        border-top: 1px solid #e2e2e2;
+        padding: 1.5rem 0;
+      }
+      .meta {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+        margin-bottom: 0.25rem;
+      }
+      .section {
+        margin-top: 3rem;
+      }
+      .section > h2 {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+      }
+      .date {
+        font-size: 0.85rem;
+        color: #777;
+      }
+      .entry h3 {
+        margin: 0.25rem 0 0.5rem;
+        font-size: 1.15rem;
+      }
+      .body :is(ul, ol) {
+        padding-left: 1.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>mittwald Changelogs</h1>
+    <p class="sub">
+      Alle Änderungen aus mStudio und Nexus. ·
+      <a href="/keystatic">Editor</a>
+    </p>
+
+    {
+      sections.map((section) => (
+        <section class="section">
+          <h2>{section.label}</h2>
+          {section.entries.map((entry) => (
+            <article class="entry">
+              <div class="meta">
+                <span class="date">{formatDate(entry.date)}</span>
+              </div>
+              <h3>{entry.title}</h3>
+              <div class="body" set:html={entry.html} />
+            </article>
+          ))}
+        </section>
+      ))
+    }
+  </body>
+</html>
