@@ -7,4 +7,7 @@ export default defineConfig({
   output: "static",
   adapter: node({ mode: "standalone" }),
   integrations: [react(), keystatic()],
+  security: {
+    allowedDomains: [{ hostname: "changelogs.mittwald.de", protocol: "https" }],
+  },
 });
