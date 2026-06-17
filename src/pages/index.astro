@@ -65,7 +65,6 @@ const formatDate = (iso: string) => (iso ? dateFormat.format(new Date(iso)) : ""
 
       .masthead {
         margin-bottom: 2.75rem;
-        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
       }
       .kicker {
         font-family: var(--mono);
@@ -129,13 +128,11 @@ const formatDate = (iso: string) => (iso ? dateFormat.format(new Date(iso)) : ""
         box-shadow: 0 6px 18px -6px rgba(107, 78, 255, 0.6);
       }
 
-      .timeline {
-        animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both;
-      }
-
       .entry {
         position: relative;
         border-top: 1px solid var(--line);
+        content-visibility: auto;
+        contain-intrinsic-size: auto 68px;
       }
       .entry:first-child {
         border-top: 0;
@@ -269,12 +266,6 @@ const formatDate = (iso: string) => (iso ? dateFormat.format(new Date(iso)) : ""
         color: inherit;
       }
 
-      @keyframes rise {
-        from {
-          opacity: 0;
-          transform: translateY(12px);
-        }
-      }
       @keyframes fade {
         from {
           opacity: 0;

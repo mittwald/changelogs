@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "mittwald Changelogs API",
+    "version": "1.0.0",
+    "description": "Oeffentliche, lesende Changelog-API."
+  },
+  "servers": [{ "url": "https://changelogs.mittwald.de" }],
+  "paths": {
+    "/api/v1/changelogs/{product}": {
+      "get": {
+        "operationId": "getChangelog",
+        "summary": "Changelog-Eintraege eines Produkts (neueste zuerst)",
+        "tags": ["Changelogs"],
+        "parameters": [
+          {
+            "name": "product",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" },
+            "example": "mstudio"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Liste der Eintraege.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ChangelogList" }
+              }
+            }
+          },
+          "404": {
+            "description": "Unbekanntes Produkt.",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/Error" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChangelogEntry": {
+        "type": "object",
+        "required": ["slug", "title", "date", "markdown", "html"],
+        "properties": {
+          "slug": { "type": "string" },
+          "title": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "markdown": { "type": "string" },
+          "html": { "type": "string" }
+        }
+      },
+      "ChangelogList": {
+        "type": "object",
+        "required": ["data"],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": { "$ref": "#/components/schemas/ChangelogEntry" }
+          }
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": ["error"],
+        "properties": { "error": { "type": "string" } }
+      }
+    }
+  }
+}

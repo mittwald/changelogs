@@ -10,5 +10,8 @@ export const GET: APIRoute = async ({ params }) => {
     return json({ error: `Unbekanntes Produkt: ${product ?? ""}` }, 404);
   }
 
-  return json({ data: await getSection(product) });
+  const section = await getSection(product);
+  return json({ data: section.entries }, 200, {
+    "cache-control": "public, max-age=300",
+  });
 };
