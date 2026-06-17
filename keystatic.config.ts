@@ -1,8 +1,9 @@
 import { config, fields, collection } from "@keystatic/core";
+import { products } from "./src/lib/products";
 
-const changelogSchema = (folder: string) =>
+const changelogSchema = (folder: string, label: string) =>
   collection({
-    label: folder === "mstudio" ? "mStudio" : "Nexus",
+    label,
     slugField: "title",
     path: `src/content/${folder}/*`,
     format: { contentField: "content", data: "yaml" },
@@ -37,12 +38,17 @@ const changelogSchema = (folder: string) =>
   });
 
 export default config({
-  storage: { kind: "local" },
+  storage: {
+    kind: "github",
+    repo: "mittwald/changelogs",
+  },
   ui: {
     brand: { name: "Changelogs" },
   },
-  collections: {
-    mstudio: changelogSchema("mstudio"),
-    nexus: changelogSchema("nexus"),
-  },
+  collections: Object.fromEntries(
+    products.map((product) => [
+      product.key,
+      changelogSchema(product.key, product.label),
+    ]),
+  ),
 });

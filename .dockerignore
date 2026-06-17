@@ -1,0 +1,9 @@
+node_modules
+dist
+.astro
+.git
+.github
+.idea
+.env
+.env.*
+.DS_Store
