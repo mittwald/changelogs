@@ -1,6 +1,6 @@
 ---
 title: Yopass und Password Pusher als neue Vorlagen im Container Hosting
-date: 2026-06-29
+date: 2026-06-26
 ---
 Mit [**Yopass**](https://share.yopass.se/) und [**Password Pusher**](https://oss.pwpush.com/) können Agenturen und Freelancer **Passwörter, Zugangsdaten** **und kleine Dateien sicher** **mit Kunden teilen** – zeitlich begrenzt und kontrolliert.
 
