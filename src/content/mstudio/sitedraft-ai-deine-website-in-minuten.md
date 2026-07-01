@@ -15,5 +15,4 @@ Struktur, Texte und passende Bilder werden automatisch generiert und können ans
 - Live-Preview für Desktop und Mobile
 - Veröffentlichung mit nur einem Klick auf deinem mittwald Server
 
-\
-Probiere **sitedraft AI** aus und bring deine nächste Website in kürzester Zeit online!
+Probiere **sitedraft AI** aus und bringe deine nächste Website in kürzester Zeit online!
