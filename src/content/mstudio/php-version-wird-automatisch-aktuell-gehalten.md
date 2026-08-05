@@ -8,6 +8,6 @@ So profitieren deine Apps ohne manuelles Zutun von Sicherheitsupdates und Bugfix
 
 Die Updates laufen nachts. Dabei werden die PHP-Prozesse deiner App neu gestartet – das dauert nur wenige Sekunden, in denen die App kurzzeitig nicht erreichbar sein kann.
 
-Wir starten mit einer kleinen Gruppe von Projekten und weiten die Umstellung dann schrittweise aus. Es kann daher ein paar Tage dauern, bis deine Apps an der Reihe sind.
+Wir starten mit einer kleinen Gruppe von Projekten und weiten die Umstellung dann schrittweise aus. Sollten dabei Probleme auftreten, stoppen wir die Ausweitung. Es kann daher ein paar Tage dauern, bis deine Apps an der Reihe sind.
 
 Der Wechsel auf eine neue Minor-Version – etwa von 8.4 auf 8.5 – bleibt weiterhin bei dir: Diesen stößt du wie gewohnt selbst im mStudio an, sobald du die Kompatibilität deiner Anwendung geprüft hast.
