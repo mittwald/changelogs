@@ -2,7 +2,7 @@
 title: Fast 50 Container-Vorlagen – und deine Idee kann die nächste sein
 date: 2026-08-10
 ---
-Coole Neuigkeiten für alle, die mit Containern arbeiten: Wir haben unsere **Container-Vorlagen kräftig ausgebaut**! Fast 50 fertige Anwendungen warten jetzt auf dich – in den Kategorien KI und Entwicklung über Sicherheit und Monitoring bis hin zu Produktivität und Kommunikation. Die Chance stehen gut, dass genau das dabei ist, was du gerade suchst.
+Coole Neuigkeiten für alle, die mit Containern arbeiten: Wir haben unsere **Container-Vorlagen kräftig ausgebaut**! Fast 50 fertige Anwendungen warten jetzt auf dich – in den Kategorien KI und Entwicklung über Sicherheit und Monitoring bis hin zu Produktivität und Kommunikation. Die Chancen stehen gut, dass genau das dabei ist, was du gerade suchst.
 
 Damit du bei so viel Auswahl den Überblick behältst, haben die Vorlagen im Projekt unter **Container** einen eigenen Bereich bekommen. Unter **Entdecken** stöberst du durch Empfehlungen und die beliebtesten Vorlagen, unter **Alle Vorlagen** suchst du gezielt. Und jede Vorlage bringt Screenshots, Beschreibung sowie Angaben zu Version, Entwickler und Lizenz mit.
 
