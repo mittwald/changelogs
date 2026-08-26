@@ -2,7 +2,7 @@
 title: 'Neue Container-Vorlagen: S3-Objektspeicher mit Silo und VaultS3 + 3 weitere'
 date: 2026-08-27
 ---
-Eigener S3-Speicher im mStudio – mit zwei neuen Vorlagen für Uploads, Assets und Backups hinter deinen Anwendungen. Beide sind S3-kompatibel und funktionieren mit gängigen SDKs, CLI- und Backup-Tools.
+Eigener, souveräner S3-Speicher direkt im mStudio – einfach starten dank zwei neuer Vorlagen und sofort als Speicher für Uploads, Assets und Backups hinter deinen Anwendungen verwenden. Beide sind S3-kompatibel und funktionieren mit gängigen SDKs, CLI- und Backup-Tools.
 
 **Highlights auf einen Blick:**
 
