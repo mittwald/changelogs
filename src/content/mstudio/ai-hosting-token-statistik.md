@@ -6,4 +6,4 @@ Die Token-Statistik im AI Hosting wurde deutlich erweitert. Neben dem Gesamtverb
 
 Zusätzlich zeigt dir eine weitere Tabelle, wie sich dein Verbrauch auf die einzelnen Modelle verteilt. Mit absoluten Token-Zahlen und prozentualem Anteil.
 
-Du findest die Statistik im Projekt unter AI Hosting auf der Tarif-Detailseite.
+Du findest die Statistik in der Organisation unter AI Hosting auf der Tarif-Detailseite.
