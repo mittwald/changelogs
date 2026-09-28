@@ -1,6 +1,6 @@
 ---
 title: DNS-Import per Zonendatei
-date: 2026-10-01
+date: 2026-09-30
 ---
 Zonendateien kannst du jetzt nicht nur exportieren, sondern auch importieren. Deine DNS‑Records werden dabei automatisch angelegt, und du musst nicht mehr jeden Eintrag einzeln übertragen. Direkt in der DNS‑Verwaltung: Unter **Domains → DNS‑Zonen** gibt es neben „Export“ jetzt auch „Import“.\
 
