@@ -9,3 +9,5 @@ Du siehst jetzt schon vor dem Build, wie deine Website aussehen könnte, und leg
 - **Zuverlässigere Anpassungen:** Durch laufende Verbesserungen und leistungsstärkere Modelle setzt sitedraft AI auch nach dem ersten Entwurf seitenübergreifende Änderungswünsche zuverlässiger um
 - **Eigener Tab:** sitedraft AI öffnet sich in einem neuen Tab, das mStudio bleibt daneben offen
 - **Stabilität:** Wir arbeiten laufend an weniger Ausfällen und einem flüssigeren Ablauf
+
+[Jetzt sitedraft AI entdecken](https://studio.mittwald.de/marketplace/extensions/a43e9eda-a0ab-4916-babf-977ea506b748)
