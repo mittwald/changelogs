@@ -24,8 +24,8 @@ importers:
         specifier: ^0.5.7
         version: 0.5.7(@types/react@19.2.17)(react@19.2.7)
       '@mittwald/flow-react-components':
-        specifier: ^1.7.4
-        version: 1.7.4(@babel/runtime@7.29.7)(@codemirror/autocomplete@6.20.4)(@codemirror/search@6.7.3)(@codemirror/theme-one-dark@6.1.3)(@internationalized/date@3.12.4)(@lezer/javascript@1.5.7)(@lezer/lr@1.4.13)(@mittwald/react-use-promise@4.3.0(axios@1.21.1)(react@19.2.7))(codemirror@6.0.2)(react-dom@19.2.7(react@19.2.7))(react-is@16.13.1)(react@19.2.7)(redux@5.0.1)
+        specifier: 1.7.1
+        version: 1.7.1(@babel/runtime@7.29.7)(@codemirror/autocomplete@6.20.4)(@codemirror/search@6.7.3)(@codemirror/theme-one-dark@6.1.3)(@internationalized/date@3.12.4)(@lezer/javascript@1.5.7)(@lezer/lr@1.4.13)(@mittwald/react-use-promise@4.3.0(axios@1.21.1)(react@19.2.7))(codemirror@6.0.2)(react-dom@19.2.7(react@19.2.7))(react-is@16.13.1)(react@19.2.7)(redux@5.0.1)
       astro:
         specifier: ^6.4.6
         version: 6.4.6(idb-keyval@6.2.5)(rollup@4.62.0)(yaml@2.9.0)
@@ -852,18 +852,18 @@ packages:
       react:
         optional: true
 
-  '@mittwald/flow-icons@1.7.4':
-    resolution: {integrity: sha512-Fxq81wox34SguQZ8LGeaXj2X3UmBMtHHTEkT1bYn6aELPY6XFOAXBl862E89eQjfjbEgckelE7TdjZmwe1Ugrg==}
+  '@mittwald/flow-icons@1.7.1':
+    resolution: {integrity: sha512-L+7alHdEajKwIKIZe6oVTGYz/eAqlOMMDKAU41XeR6XcxYP1Ig4fZoosmX7ZKAKZJ01woBNjSjFSRl8B29NupA==}
     engines: {node: '>=24.0.0'}
     peerDependencies:
       react: ^19.2.0
 
-  '@mittwald/flow-react-components@1.7.4':
-    resolution: {integrity: sha512-TNq3T+oqnWwcNeqYQ00qK1iYQ9tjfdbqFRwe0qAFAsHUCJ7G9y+csk+qiiax2FNbOyqSgiz81AVgQUczMW5sGg==}
+  '@mittwald/flow-react-components@1.7.1':
+    resolution: {integrity: sha512-A5n1llFMpBgnEdeLe3tIwK/gCrD0c/mfHKThyEn/eRp4paXWjl2abPGns9TyBMXyjGZhR70kKiyS8SC/fCWuYg==}
     engines: {node: '>=24.0.0'}
     peerDependencies:
       '@internationalized/date': ^3.12.2
-      '@mittwald/flow-icons-pro': 1.7.4
+      '@mittwald/flow-icons-pro': 1.7.1
       '@mittwald/react-use-promise': ^4.2.2
       next: ^16.2.3
       react: ^19.2.0
@@ -884,8 +884,8 @@ packages:
     engines: {node: '>=21'}
     hasBin: true
 
-  '@mittwald/react-tunnel@1.7.4':
-    resolution: {integrity: sha512-UdXd4notLY+Dke/Lis0ziRSAb48YXfnHS47bFZMi0xPzb2bY/CsHxm1bSMF2xCcHlG4yj786ldCexFqBMuQazA==}
+  '@mittwald/react-tunnel@1.7.1':
+    resolution: {integrity: sha512-St9HTM8y9ghoPGIUAXcNdkxEbjwGtpVS01lvEE3/eeIwL+2nDmhPibT7NtNWy1bCGBtFCt6cF8jhzmsbFvRS5g==}
     engines: {node: '>=24.0.0'}
     peerDependencies:
       react: ^19.2.0
@@ -1780,6 +1780,9 @@ packages:
 
   '@swc/helpers@0.5.23':
     resolution: {integrity: sha512-5lSsMOTXURePglDfvuAQUqkGek9Hg2kksOYay2m0+XR++b2NWYL/4sWyuvVBIs8oKnJaxkdi9whaL/sqN13afw==}
+
+  '@swc/helpers@0.5.24':
+    resolution: {integrity: sha512-6tcXo4kA8HgGO7AVmawB57RYi/piBPYVHVcO6dXjX+SZw8GoHmi262sp4v2Ha2kNP9Cx84qei27yT+fjS1lxgg==}
 
   '@tanstack/table-core@8.21.3':
     resolution: {integrity: sha512-ldZXEhOBb8Is7xLs01fR3YEc3DERiz5silj8tnGkFZytt1abEvl/GhUmCE0PMLaMPTa3Jk4HbKmRlHmu+gCftg==}
@@ -5097,11 +5100,11 @@ snapshots:
       '@types/react': 19.2.17
       react: 19.2.7
 
-  '@mittwald/flow-icons@1.7.4(react@19.2.7)':
+  '@mittwald/flow-icons@1.7.1(react@19.2.7)':
     dependencies:
       react: 19.2.7
 
-  '@mittwald/flow-react-components@1.7.4(@babel/runtime@7.29.7)(@codemirror/autocomplete@6.20.4)(@codemirror/search@6.7.3)(@codemirror/theme-one-dark@6.1.3)(@internationalized/date@3.12.4)(@lezer/javascript@1.5.7)(@lezer/lr@1.4.13)(@mittwald/react-use-promise@4.3.0(axios@1.21.1)(react@19.2.7))(codemirror@6.0.2)(react-dom@19.2.7(react@19.2.7))(react-is@16.13.1)(react@19.2.7)(redux@5.0.1)':
+  '@mittwald/flow-react-components@1.7.1(@babel/runtime@7.29.7)(@codemirror/autocomplete@6.20.4)(@codemirror/search@6.7.3)(@codemirror/theme-one-dark@6.1.3)(@internationalized/date@3.12.4)(@lezer/javascript@1.5.7)(@lezer/lr@1.4.13)(@mittwald/react-use-promise@4.3.0(axios@1.21.1)(react@19.2.7))(codemirror@6.0.2)(react-dom@19.2.7(react@19.2.7))(react-is@16.13.1)(react@19.2.7)(redux@5.0.1)':
     dependencies:
       '@codemirror/language': 6.13.1
       '@codemirror/lint': 6.9.8
@@ -5113,9 +5116,9 @@ snapshots:
       '@internationalized/string-compiler': 3.4.1
       '@lezer/common': 1.5.7
       '@lezer/highlight': 1.2.5
-      '@mittwald/flow-icons': 1.7.4(react@19.2.7)
+      '@mittwald/flow-icons': 1.7.1(react@19.2.7)
       '@mittwald/password-tools-js': 3.0.0
-      '@mittwald/react-tunnel': 1.7.4(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      '@mittwald/react-tunnel': 1.7.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@mittwald/react-use-promise': 4.3.0(axios@1.21.1)(react@19.2.7)
       '@react-aria/form': 3.2.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@react-aria/i18n': 3.13.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -5195,7 +5198,7 @@ snapshots:
       - debug
       - supports-color
 
-  '@mittwald/react-tunnel@1.7.4(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@mittwald/react-tunnel@1.7.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       mobx: 6.16.1
       mobx-react-lite: 4.1.1(mobx@6.16.1)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -5603,7 +5606,7 @@ snapshots:
   '@react-spectrum/provider@3.11.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
       '@adobe/react-spectrum': 3.47.1(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
-      '@swc/helpers': 0.5.23
+      '@swc/helpers': 0.5.24
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
@@ -6170,6 +6173,8 @@ snapshots:
   '@swc/helpers@0.5.23':
     dependencies:
       tslib: 2.8.1
+
+  '@swc/helpers@0.5.24': {}
 
   '@tanstack/table-core@8.21.3': {}
 

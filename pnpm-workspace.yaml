@@ -4,3 +4,5 @@ onlyBuiltDependencies:
 allowBuilds:
   esbuild: true
   sharp: true
+# Same as pnpm 12, which the Docker build uses: ignore releases younger than a day.
+minimumReleaseAge: 1440
