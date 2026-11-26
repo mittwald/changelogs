@@ -13,7 +13,7 @@ pnpm dev        # http://localhost:4321
 pnpm build
 ```
 
-- `/` — Changelog-Seite (Tabs bei mehreren Produkten)
+- `/` — Changelog-Seite, gebaut mit [Flow](https://flow.mittwald.de) (erstes Produkt; weitere Produkte unter `/{produkt}`, verbunden über eine TabNavigation)
 - `/keystatic` — Editor (committet im GitHub-Mode direkt ins Repo)
 - `/api/v1/changelogs/{product}` — JSON-API
 
