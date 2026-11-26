@@ -1,0 +1,39 @@
+.page {
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+/* An entry is a jump target (#slug): keep a little room above it. */
+.entry {
+  scroll-margin-top: var(--size-px--m);
+}
+
+/* Text links are never bold, not even when the editor bolded the link text. */
+.markdown a :is(strong, b) {
+  font-weight: inherit;
+}
+
+/* Title with its date below, inside the accordion toggle. Half of Flow's
+   smallest step: xs (4px) looked loose, none too tight. */
+.entryTitle {
+  display: flex;
+  flex-direction: column;
+  row-gap: calc(var(--size-px--xs) / 2);
+}
+
+/* Same grey as Flow's Label. */
+.date {
+  font-size: var(--font-size-text--s);
+  font-weight: normal;
+  color: var(--label--color--default);
+}
+
+/* The badge follows the title's last word like a word of its own, centred
+   on that line: a box one line high that centres its content. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 1lh;
+  vertical-align: top;
+  margin-inline-start: var(--size-px--s);
+}

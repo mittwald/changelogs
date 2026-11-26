@@ -1,0 +1,15 @@
+---
+import type { GetStaticPaths } from "astro";
+import ChangelogLayout from "../layouts/ChangelogLayout.astro";
+import { products } from "../lib/products";
+
+// Every further product gets its own page; the first one is served at `/`.
+export const getStaticPaths = (() =>
+  products
+    .slice(1)
+    .map((product) => ({ params: { product: product.key } }))) satisfies GetStaticPaths;
+
+const { product } = Astro.params;
+---
+
+<ChangelogLayout productKey={product} />

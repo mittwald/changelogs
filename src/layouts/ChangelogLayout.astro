@@ -1,0 +1,78 @@
+---
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import {
+  ChangelogEntryBody,
+  ChangelogPage,
+  formatDate,
+} from "../components/Changelog";
+import { ChangelogAccordions } from "../components/ChangelogAccordions";
+import { getSection } from "../lib/changelogs";
+import { products } from "../lib/products";
+
+interface Props {
+  productKey: string;
+}
+
+const { productKey } = Astro.props;
+const section = await getSection(productKey);
+const multi = products.length > 1;
+const title = multi ? "mittwald Changelog" : `${section.label} Changelog`;
+const documentTitle = multi
+  ? `${section.label} · mittwald Changelog`
+  : `${title} · mittwald`;
+
+// One accordion per entry, newest first (entries are sorted). The bodies are
+// rendered to HTML here, so the browser needs no markdown renderer.
+const entries = section.entries.map((entry) => ({
+  slug: entry.slug,
+  title: entry.title,
+  date: formatDate(entry.date),
+  html: renderToStaticMarkup(createElement(ChangelogEntryBody, { entry })),
+}));
+---
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="none" />
+    <!-- Same icons as mStudio (new brand blue). Bump ?v= whenever the files
+         change, so browsers drop their cached icon (mStudio uses v=2 too). -->
+    <link rel="icon" href="/favicon.ico?v=2" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
+    <title>{documentTitle}</title>
+    <style is:global>
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        background-color: var(--color--mittwald-neutral--200);
+        -webkit-text-size-adjust: 100%;
+      }
+      /* Same backdrop as flow.mittwald.de and mStudio; fixed, so it stays put while the long page scrolls. */
+      .background {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: var(--background-gradient--color);
+      }
+      .main {
+        box-sizing: border-box;
+        padding: var(--size-px--xl) var(--size-px--m);
+      }
+      @media (max-width: 600px) {
+        .main {
+          padding: var(--size-px--m) var(--size-px--s);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background" aria-hidden="true"></div>
+    <main class="main">
+      <ChangelogPage title={title} products={products} current={productKey}>
+        <ChangelogAccordions entries={entries} client:load />
+      </ChangelogPage>
+    </main>
+  </body>
+</html>
